@@ -13,17 +13,27 @@
         // Harus huruf besar di bagian awan nama
        function Person()
        {
-
+            this.firstName = "";
+            this.lastName = "";
        }
 
-        // Harus huruf besar di bagian awan nama
-        function PersonMember()
-       {
+    //     // Harus huruf besar di bagian awan nama
+    //     function PersonMember()
+    //    {
 
-       }
+    //    }
 
-       const sam =new person();
-       const budi = new person();
+       const sam = new Person();
+       sam.firstName = 'Samuel';
+
+
+
+       const budi = new Person();
+       budi.firstName = "SAM";
+       budi.lastName = "Bos";
+
+       console.log(sam)
+       console.log(budi)
     </script>
 
 
