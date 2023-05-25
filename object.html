@@ -15,22 +15,24 @@
        {
             this.firstName = "";
             this.lastName = "";
+            this.sayHello = function(name){
+                console.info(`Hello ${name} my name is ${this.firstName}`)
+            }
        }
 
-    //     // Harus huruf besar di bagian awan nama
-    //     function PersonMember()
-    //    {
-
-    //    }
+  
 
        const sam = new Person();
        sam.firstName = 'Samuel';
+       sam.sayHello('Joko');
 
 
 
        const budi = new Person();
        budi.firstName = "SAM";
        budi.lastName = "Bos";
+       budi.sayHello('budi');
+
 
        console.log(sam)
        console.log(budi)
