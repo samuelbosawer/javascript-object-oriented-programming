@@ -11,10 +11,10 @@
 
     <script>
         // Harus huruf besar di bagian awan nama
-       function Person()
+       function Person(firstname, lastname)
        {
-            this.firstName = "";
-            this.lastName = "";
+            this.firstName = firstname ;
+            this.lastName = lastname;
             this.sayHello = function(name){
                 console.info(`Hello ${name} my name is ${this.firstName}`)
             }
@@ -22,15 +22,11 @@
 
   
 
-       const sam = new Person();
-       sam.firstName = 'Samuel';
-       sam.sayHello('Joko');
+       const sam = new Person('sam','bos');
 
 
 
-       const budi = new Person();
-       budi.firstName = "SAM";
-       budi.lastName = "Bos";
+       const budi = new Person('budi','joko');
        budi.sayHello('budi');
 
 
