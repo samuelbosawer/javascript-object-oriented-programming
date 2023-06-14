@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Object </title>
+    <title>Prototype </title>
 </head>
 <body>
     
@@ -25,14 +25,33 @@
 
        const sam = new Person('sam','bos');
 
+    //    Menambahkan property ke instance object
+    //    sam.sayBye = function (){
+    //     console.info('Good Moring')
+    //    }
 
+    //    Menambahkan property ke prototype ✅
+    Person.prototype.sayBye = function()
+    {
+        console.info("Good Bye");
+    }
 
+    Person.prototype.run = function()
+    {
+        console.info(`${this.firstName}  is running`)
+    }
+
+    sam.sayBye = function ()
+    {
+        console.info('Sampai Jumpa')
+    }
+       
        const budi = new Person('budi','joko');
-       budi.sayHello('budi');
-
-
        console.log(sam)
        console.log(budi)
+
+       sam.sayBye();
+       sam.run();
     </script>
 
 
