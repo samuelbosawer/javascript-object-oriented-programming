@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inhertitance</title>
+</head>
+<body>
+    
+    <script>
+        function Employee(name)
+        {
+            this.name = name;
+        }
+
+        function Manager(name)
+        {
+            this.name = name;
+        }
+
+        // Cara Salah
+        // Employee.prototype = Manager.prototype;
+
+        // Cara Benar
+        Manager.prototype = Object.create(Employee.prototype)
+
+        Manager.prototype.sayHello = function (name)
+        {
+            console.info(`Hello ${name}, my name is Manager ${this.name}`);
+        }
+
+        Employee.prototype.sayHello = function (name)
+        {
+            console.info(`Hello ${name}, my name is Employed ${this.name}`);
+        }
+
+        const employed = new Employee('Budi');
+        employed.sayHello("Joko")
+
+        const manager = new Manager('Budi');
+        manager.sayHello("Joko");
+
+
+
+        console.info(employed);
+        // conselo.info(manager);
+
+    </script>
+</body>
+</html>
