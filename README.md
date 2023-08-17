@@ -4,7 +4,7 @@
     ✅ Method di Constructor Function
     ✅ Prototype
     ✅ Class
-    ✅
+    ✅ Property di Class
     ✅
     ✅
     ✅
