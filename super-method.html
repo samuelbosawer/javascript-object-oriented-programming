@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Method</title>
+</head>
+<body>
+
+    <script>
+        class Shape
+        {
+            print()
+            {
+                console.info('Paint Shape');
+            }
+            print2()
+            {
+                console.info('Paint Shape');
+            }
+          
+        }
+
+        class Circle extends Shape{
+            print()
+            {
+                super.print2();
+                console.info('Paint Circel');
+            }
+        }
+
+        const cicle = new Circle;
+        cicle.print();
+    </script>
+    
+</body>
+</html>
