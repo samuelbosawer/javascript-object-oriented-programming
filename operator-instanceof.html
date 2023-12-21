@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Instanceof</title>
+</head>
+<body>
+    
+    <script>
+        class Employee
+        {
+
+        }
+        class Manager extends Employee
+        {
+
+        }
+
+        sam = new Employee;
+        hendro = new Manager;
+
+        console.info(typeof sam)
+        console.info(typeof hendro)
+
+        console.info(sam instanceof Employee)
+        console.info(sam instanceof Manager)
+
+        console.info(hendro instanceof Employee)
+        console.info(hendro instanceof Manager)
+
+    </script>
+
+</body>
+</html>
