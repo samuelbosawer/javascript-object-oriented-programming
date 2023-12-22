@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    
+    <script>
+        class Mat{
+            static sum(...numbers)
+            {
+                if(numbers.length == 0)
+                {
+                    throw new Error('Total Parameter harus lebih dari 0')
+                }
+               let total = 0;
+
+                for(const number of numbers)
+                {
+                    total+=number
+                }
+
+                return total;
+
+            }
+        }
+
+    try {
+        // console.info(Mat.sum());
+        const result = Mat.sum(1,1,1,1,3)
+        console.info(result);
+    } catch (error) {
+        console.info(`Terjadi error ${error}`)
+    } finally{
+        console.info('Program Selesai')
+    }
+    console.info('Sam')
+      
+    
+    class Counter{
+        #counter = 1;
+        next()
+        {
+            try{
+                return this.#counter;
+
+            } finally {
+                this.#counter++
+
+            }
+        }
+
+    }
+
+    const count = new Counter();
+    console.info(count.next());
+    console.info(count.next());
+    console.info(count.next());
+    console.info(count.next());
+    console.info(count.next());
+    console.info(count.next());
+    console.info(count.next());
+    </script>
+</body>
+</html>
